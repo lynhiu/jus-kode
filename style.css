@@ -1,0 +1,929 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Times New Roman", Times, serif;
+  letter-spacing: 1px;
+}
+a {
+  text-decoration: none;
+}
+
+.container {
+  max-width: 1400px;
+  margin: auto;
+}
+/* gunakan code di bawah untuk sticky header */
+/*
+  header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: white;
+  }
+*/
+/* fhyfhfhgfhf */
+header {
+  background-color: rgba(0, 0, 0, 0);
+  width: 100%;
+  position: fixed;
+  top: 15px;
+  left: 0;
+  z-index: 1000;
+}
+section {
+  justify-content: center;
+}
+
+/**********/
+/**navigation bar**/
+/**********/
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 50px;
+  align-items: center;
+  width: 100%;
+  background-color: #fbecbb;
+  border-radius: 50px;
+  padding: 2px 30px;
+  box-shadow: 5px 9px;
+  border: 3.5px solid black;
+}
+/*tombol navigation*/
+.menu {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  list-style-type: none;
+  color: #4c5424;
+  cursor: pointer;
+}
+.logo {
+  width: 110px;
+  padding-top: 7px;
+}
+.menu-list {
+  padding: 2px 20px;
+  font-size: 18px;
+}
+.menu-link {
+  position: relative;
+  padding: 8px;
+  color: #4c5424;
+}
+.menu-link::before {
+  position: absolute;
+  background-color: #323a05;
+  width: 100%;
+  height: 2px;
+  border-radius: 20px;
+  bottom: 0;
+  left: 0;
+  content: "";
+  transform-origin: right;
+  transform: scaleX(0);
+  transition: transform 300ms ease-in-out;
+}
+.menu-link.active::before {
+  transform-origin: left;
+  transform: scaleX(1);
+}
+.menu-link:hover {
+  color: #7e1730;
+}
+/*tombol navigation contact*/
+.contact {
+  padding: 10px 40px;
+  text-align: center;
+  margin: 0 -20px;
+  border-radius: 40px;
+  font-size: 18px;
+  background: #4c5424;
+  border: 3px solid black;
+  color: #fbecbb;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 2px 3px black;
+}
+.contact::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: #4c5424;
+  box-shadow: none;
+  translate: 6px 6px;
+  transition: 0.25s;
+  z-index: -1;
+}
+.contact:hover::after {
+  translate: 0;
+}
+.contact:hover {
+  background-color: #4c542433;
+  color: #4c5424;
+  box-shadow: none;
+  border: 3px solid #4c5424;
+}
+.rectangle {
+  background: #7e1730;
+  height: 60px;
+  border-bottom: 5px solid black;
+}
+
+/**********/
+/**hero page**/
+/**********/
+.banner {
+  background-image: url(asset/foto/hero_page.jpg);
+  border-image: fill 0 linear-gradient(rgba(0, 0, 0, 0.182), #000000af);
+  min-height: 70vh;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+/**hero page text**/
+.juskode {
+  text-align: left;
+  font-size: 40px;
+  font-weight: 200;
+  color: #fbecbb;
+  padding: 30px 30px;
+  padding-top: 100px;
+  margin-left: 55%;
+}
+.juskode h1 {
+  font-size: 70px;
+  margin: 15px 0;
+}
+.mulai {
+  padding: 10px 40px;
+  text-align: center;
+  border-radius: 40px;
+  font-size: 18px;
+  background: #7e1730;
+  border: 0;
+  color: #fbecbb;
+  cursor: pointer;
+  overflow: hidden;
+  box-shadow: 2px 5px black;
+  border: 3px solid black;
+}
+.mulai::after {
+  content: "";
+  position: absolute;
+  box-shadow: none;
+  translate: 6px 6px;
+  transition: 0.25s;
+  z-index: -1;
+}
+.mulai:hover::after {
+  translate: 0;
+}
+.mulai:hover {
+  background-color: #7e17315e;
+  box-shadow: none;
+  color: #e46c8a;
+  border: 3px solid #e46c8a;
+}
+
+/**********/
+/*qoutes hidup sehat*/
+/**********/
+.quotes {
+  text-align: center;
+  font-size: 60px;
+  color: #fbecbb;
+  background-color: #4c5424;
+  padding: 100px;
+  border-bottom: 5px dashed black;
+  border-top: 5px dashed black;
+}
+
+/**********/
+/*tentang kami*/
+/**********/
+.tentangkami {
+  position: relative;
+  background-color: #fbecbb;
+  border-bottom: 5px solid black;
+}
+.about {
+  background-color: #fbecbb;
+  height: 450px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.text-about {
+  text-align: center;
+  margin: 50px;
+  margin-left: 100px;
+}
+/******************/
+/*coba slider*/
+.slider {
+  height: 400px;
+  width: 1400px;
+  border-radius: 40px;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  margin-top: 15px;
+  margin-left: 30px;
+  border: 4px solid black;
+  box-shadow: 10px 12px black;
+}
+.slides {
+  width: 500%;
+  height: 420px;
+  display: flex;
+}
+.slides input {
+  display: none;
+}
+.slide {
+  width: 20%;
+  transition: 2s;
+}
+.slide img {
+  width: 420px;
+  height: 420px;
+}
+/*css manual*/
+.nav-manual {
+  position: absolute;
+  width: 420px;
+  transform: translateX(-20px) translateY(360px);
+  display: flex;
+  justify-content: center;
+  z-index: 1;
+}
+.manual-btn1 {
+  border: 2px solid #fbecbb;
+  padding: 5px;
+  border-radius: 40px;
+  cursor: pointer;
+  transition: 1s;
+}
+.manual-btn1:not(:last-child) {
+  margin-right: 15px;
+}
+.manual-btn1:hover {
+  background: #fbecbbc2;
+  transition: 0.3;
+}
+
+#radio1:checked ~ .first {
+  margin-left: 0;
+}
+#radio2:checked ~ .first {
+  margin-left: -20%;
+}
+#radio3:checked ~ .first {
+  margin-left: -40%;
+}
+
+/*css auto*/
+.nav-auto {
+  position: absolute;
+  width: 420px;
+  transform: translateX(-20px) translateY(360px);
+  display: flex;
+  justify-content: center;
+}
+.nav-auto div {
+  border: 2px solid #fbecbb;
+  padding: 5px;
+  border-radius: 40px;
+  cursor: pointer;
+  transition: 1s;
+}
+.nav-auto div:not(:last-child) {
+  margin-right: 15px;
+}
+
+#radio1:checked ~ .nav-auto .auto-btn1 {
+  background: #fbecbb;
+  box-shadow: 2.6px 1.6px black;
+}
+#radio2:checked ~ .nav-auto .auto-btn2 {
+  background: #fbecbb;
+  box-shadow: 2.6px 1.6px black;
+}
+#radio3:checked ~ .nav-auto .auto-btn3 {
+  background: #fbecbb;
+  box-shadow: 2.6px 1.6px black;
+}
+/*****coba******/
+.tentangkamitext {
+  margin-top: 50px;
+  font-size: 48px;
+  color: #7e1730;
+  font-weight: 400;
+}
+.p-tentangkami {
+  margin-top: 30px;
+  color: #4c5424;
+  font-size: 18px;
+}
+.b-pelajari {
+  padding: 10px 40px;
+  text-align: center;
+  margin-top: 30px;
+  border-radius: 40px;
+  font-size: 18px;
+  background: #4c5424;
+  border: 0;
+  color: #fbecbb;
+  cursor: pointer;
+  box-shadow: 2px 5px black;
+  border: 3px solid #1d210c;
+  position: relative;
+  z-index: 1;
+}
+.b-pelajari::after {
+  content: "";
+  position: absolute;
+  box-shadow: none;
+  translate: 6px 6px;
+  transition: 0.2s ease-in;
+  z-index: -1;
+}
+.b-pelajari:hover::after {
+  translate: 0;
+}
+.b-pelajari:hover {
+  background-color: #4c542433;
+  color: #4c5424;
+  box-shadow: none;
+  border: 3px solid black;
+}
+/**********/
+/*tentang kami end*/
+/**********/
+
+/**********************/
+/******temukan*******/
+/*********************/
+.temukan {
+  background: #7e1730;
+  height: 340px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  border-bottom: 5px solid black;
+}
+.temukankami {
+  text-align: center;
+  padding-top: 50px;
+}
+.temukankami h5 {
+  font-size: 50px;
+  font-weight: 500;
+  color: #f8c51b;
+}
+.temukankami p {
+  font-size: 18px;
+  color: #fbecbb;
+  font-weight: lighter;
+  line-height: 25px;
+}
+.p-temukan {
+  margin-top: 40px;
+}
+input {
+  width: 21%;
+  padding: 15px 10px;
+  margin-left: 30px;
+  background-color: #7e1730;
+  border-radius: 40px;
+  padding-left: 25px;
+  box-shadow: 2px 5px black;
+  border: 3px solid black;
+  outline: none;
+  transition: 0.1s ease;
+  z-index: 2;
+}
+input::placeholder {
+  color: #fbecbb;
+  font-size: 16px;
+}
+input:focus {
+  color: black;
+  background-color: #fbecbb;
+  box-shadow: none;
+  font-size: 16px;
+}
+input:hover {
+  background-color: #fbecbb63;
+  box-shadow: none;
+}
+.lokasi {
+  padding: 15px 150px;
+  padding-left: 25px;
+  text-align: left;
+  margin-right: 30px;
+  border-radius: 40px;
+  font-size: 16px;
+  background: #4c5424;
+  border: 0;
+  color: #fbecbbb8;
+  cursor: pointer;
+  border: 3px solid #1d210c;
+  box-shadow: 2px 5px black;
+  position: relative;
+  z-index: 1;
+}
+.lokasi:hover {
+  background-color: #fbecbb63;
+  color: black;
+  box-shadow: none;
+  border: 3px solid black;
+}
+.atau {
+  max-width: 20%;
+  text-align: center;
+}
+.tombol-lokasi {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+}
+/**********************/
+/******temukan end*******/
+/*********************/
+
+/******temukan end*******/
+.cobaa {
+  z-index: 1;
+  overflow: hidden;
+}
+.buah {
+  background-color: #cb06376c;
+  margin: 0;
+  padding: 0;
+}
+.buahi {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.buahi img {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  margin-top: 950px;
+}
+
+/******temukan end*******/
+
+/**********************/
+/******franchise start*******/
+/*********************/
+section#section-4 {
+  height: 95vh;
+  background-color: #fbecbb;
+  z-index: 1;
+}
+.bentobox h5 {
+  font-size: 48px;
+  color: #323a05;
+  font-weight: 400;
+  text-align: center;
+  padding-top: 40px;
+}
+
+/**********************/
+/******bento box*******/
+/*********************/
+/******liat bento box bpk*******/
+.grid {
+  margin-top: 30px;
+  height: 60vh;
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(8, 1fr);
+  grid-template-areas:
+    "area3 area3 area2 area2 area1 area1"
+    "area3 area3 area2 area2 area1 area1"
+    "area3 area3 area2 area2 area1 area1"
+    "area3 area3 area2 area2 area1 area1"
+    "area4 area4 area2 area2 area1 area1"
+    "area4 area4 area5 area6 area1 area1"
+    "area4 area4 area5 area6 area1 area1"
+    "area4 area4 area5 area6 area1 area1";
+  margin-left: 5%;
+  margin-right: 5%;
+}
+.item {
+  border: 4px solid black;
+  border-radius: 40px;
+  position: relative;
+  overflow: hidden;
+  transition: transform 1s;
+  transform: translateY(200px);
+  box-shadow: 4px 5px black;
+}
+/******misi*******/
+.item-1 {
+  grid-area: area1;
+  /* transform: translateY(300px); */
+  background-color: #7e1730;
+  color: #fbecbb;
+}
+/******visi*******/
+.item-2 {
+  grid-area: area2;
+  transform: translateY(300px);
+  background-color: #4c5424;
+  color: #fbecbb;
+}
+/******profit*******/
+.item-3 {
+  grid-area: area3;
+  transform: translateY(250px);
+}
+.profit {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding-left: 30px;
+  padding-right: 30px;
+  background-color: #fbecbb;
+  opacity: 1;
+  transition: 1 ease-in-out;
+}
+.profit:hover {
+  opacity: 0;
+}
+/******reliability*******/
+.item-4 {
+  grid-area: area4;
+}
+.rel {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-left: -20px;
+  opacity: 1;
+  transition: 1 ease-in-out;
+}
+.rel:hover {
+  opacity: 0;
+}
+/******sustainability*******/
+.item-5 {
+  grid-area: area5;
+  background-color: #fbecbb;
+}
+.sustain {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-top: -10px;
+  margin-left: -5px;
+  max-height: 150px;
+  background-color: #fbecbb;
+  opacity: 1;
+  transition: 1 ease-in-out;
+}
+.sustain:hover {
+  opacity: 0;
+}
+
+/* transform: translateY(700px); */
+/******awarness*******/
+.item-6 {
+  grid-area: area6;
+  /* transform: translateY(800px); */
+}
+.item-6 {
+  grid-area: area6;
+  background-color: #fbecbb;
+}
+.aware {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-top: -7px;
+  margin-left: -3;
+  max-height: 148px;
+  background-color: #fbecbb;
+  opacity: 1;
+  transition: 1 ease-in-out;
+}
+.aware:hover {
+  opacity: 0;
+}
+
+.item:hover {
+  box-shadow: none;
+  background-color: #eee0af;
+}
+.isi-bento {
+  justify-content: center;
+}
+.bento-text-visi {
+  margin: 30px;
+  margin-top: 20px;
+}
+.bento-judul-visi {
+  font-weight: bold;
+  font-size: 22px;
+  margin-left: 30px;
+  margin-top: 30px;
+}
+.item-1:hover {
+  background-color: #7e17312f;
+  box-shadow: none;
+  border: 4px solid #7e1730;
+  color: #7e1730;
+}
+.item-2:hover {
+  background-color: #4c542433;
+  box-shadow: none;
+  border: 4px solid #4c5424;
+  color: #4c5424;
+}
+.bento-judul {
+  font-weight: bold;
+  font-size: 20px;
+  margin-left: 20px;
+  margin-top: 25px;
+}
+.bento-judul1 {
+  font-weight: bold;
+  font-size: 20px;
+  margin-left: 20px;
+  margin-top: 30px;
+}
+.bento-text {
+  margin: 20px;
+  margin-top: 20px;
+  font-size: 14px;
+}
+.bento-text-kecil {
+  margin-left: 20px;
+  margin-right: 10px;
+  margin-top: 10px;
+  font-size: 13px;
+}
+.bento-judul-kecil {
+  font-weight: bold;
+  font-size: 18px;
+  margin-left: 20px;
+  margin-top: 20px;
+}
+.item.active {
+  transform: translateY(0);
+}
+.link-proposal {
+  background-color: #4c5424;
+  margin-top: 30px;
+  text-align: center;
+  border-bottom: 5px solid black;
+  border-top: 5px dashed black;
+  padding: 20px;
+}
+.link-proposal a {
+  color: #fbecbb;
+  font-size: 26px;
+  text-decoration: underline;
+  padding: 10px;
+}
+.link-proposal a:hover {
+  color: #f8c51b;
+}
+/**********************/
+/******bentobox end*******/
+/*********************/
+
+/**********************/
+/******kontak kami start*******/
+/*********************/
+.kon {
+  background-color: #fbecbb;
+  padding: 70px;
+}
+.kontakkami {
+  display: flex;
+  justify-content: center;
+}
+.kontakkami img {
+  width: 600px;
+  height: 500px;
+  margin-left: 30px;
+  border-radius: 40px;
+  border: 4px solid black;
+  box-shadow: 6px 8px black;
+}
+.tc-container {
+  position: relative;
+  justify-content: center;
+  align-items: center;
+}
+.front {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: 1 ease-in-out;
+}
+.front:hover {
+  opacity: 1;
+}
+.kanan {
+  margin-left: 100px;
+}
+.kanan h1 {
+  font-size: 48px;
+  color: #7e1730;
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+.b-hubungi input {
+  width: 300px;
+  padding: 15px 0;
+  margin-left: 0;
+  margin-top: 20px;
+  background-color: transparent;
+  border-radius: 20px;
+  padding-left: 25px;
+  padding-right: 250px;
+  border: 3px solid #4c5424;
+  box-shadow: none;
+  outline: none;
+  font-size: 18px;
+}
+.b-hubungi input::placeholder {
+  color: #4c5424;
+}
+.pesan input {
+  padding-bottom: 180px;
+  border-radius: 25px;
+}
+
+.b-kirim {
+  padding: 10px 40px;
+  text-align: center;
+  margin-top: 20px;
+  border-radius: 40px;
+  font-size: 18px;
+  background: #7e1730;
+  border: 0;
+  color: #fbecbb;
+  cursor: pointer;
+  box-shadow: 2px 5px black;
+  border: 3px solid #1d210c;
+}
+.b-kirim::after {
+  content: "";
+  position: absolute;
+  box-shadow: none;
+  translate: 6px 6px;
+  transition: 0.2s ease-in;
+  z-index: -1;
+}
+.b-kirim:hover::after {
+  translate: 0;
+}
+.b-kirim:hover {
+  background-color: #7e17312f;
+  color: #7e1730;
+  box-shadow: none;
+  border: 3px solid #7e1730;
+}
+.logo-social {
+  display: flex;
+  gap: 15px;
+  margin-top: 20px;
+  transition: 0.5 ease-in-out;
+}
+.fa-tiktok {
+  color: #4c5424;
+  background-color: #fbecbb;
+  padding: 5px;
+  font-size: 20px;
+  border-radius: 8px;
+}
+.fa-tiktok:hover {
+  background-color: #f8c51b;
+}
+.fa-instagram {
+  color: #4c5424;
+  background-color: #fbecbb;
+  padding: 3px;
+  padding-left: 4px;
+  font-size: 25px;
+  border-radius: 8px;
+}
+.fa-instagram:hover {
+  background-color: #f8c51b;
+}
+.fa-whatsapp {
+  color: #4c5424;
+  background-color: #fbecbb;
+  padding: 3px;
+  padding-left: 4px;
+  font-size: 25px;
+  border-radius: 8px;
+}
+.fa-whatsapp:hover {
+  background-color: #f8c51b;
+}
+.fa-envelope {
+  color: #4c5424;
+  background-color: #fbecbb;
+  padding: 6px;
+  padding-right: 5px;
+  padding-left: 5px;
+  font-size: 20px;
+  border-radius: 8px;
+}
+.fa-envelope:hover {
+  background-color: #f8c51b;
+}
+/**********************/
+/******kontak kami end*******/
+/*********************
+
+/**********************/
+/******footer start*******/
+/*********************/
+.footer1 {
+  font-size: 14px;
+}
+.footer {
+  background-color: #4c5424;
+  border-top: 5px solid black;
+}
+.isi-footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  background-color: #4c5424;
+}
+.kodegrup {
+  max-width: fit-content;
+  margin: 0;
+}
+.kodegrup img {
+  width: 200px;
+  margin-top: 30px;
+}
+.kodegrup p {
+  color: #fbecbb;
+  max-width: 420px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+.nav-footer {
+  list-style-type: none;
+  color: #fbecbb;
+  margin-top: 25px;
+  cursor: pointer;
+}
+.nav-footer li {
+  margin: 20px;
+  list-style: none;
+  color: #fbecbb;
+}
+.nav-footer a {
+  color: #fbecbb;
+}
+.nav-footer a:hover {
+  color: #f8c51b;
+}
+.f-hubungi {
+  margin: 10px;
+  max-width: 355px;
+  color: #fbecbb;
+  margin-top: 30px;
+}
+.f-hubungi h5 {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+/**********************/
+/******footer end*******/
+/*********************/
+.merah-gjls {
+  background-color: #7e1730;
+}
+.gls p {
+  margin-left: 80px;
+  font-size: 12px;
+  padding: 5px;
+  color: #fbecbb;
+}

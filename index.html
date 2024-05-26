@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Djoes Kode</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  </head>
+  <body>
+    <header>
+      <nav class="container">
+        <div class="logo-container">
+          <img
+            src="asset/logo/logo_pngwebp.webp"
+            alt="Djoes Kode logo"
+            class="logo"
+          />
+        </div>
+        <ul class="menu">
+          <li class="menu-list">
+            <a class="menu-link" href="#section-1">Home</a>
+          </li>
+          <li class="menu-list">
+            <a class="menu-link" href="#section-2">Tentang Kami</a>
+          </li>
+          <li class="menu-list">
+            <a class="menu-link" href="#section-3">Temukan Kami</a>
+          </li>
+          <li class="menu-list">
+            <a class="menu-link" href="#section-4">Franchise</a>
+          </li>
+        </ul>
+        <a class="contact" href="#section-5">Kontak</a>
+      </nav>
+    </header>
+
+    <main>
+      <section id="section-1" class="hero">
+        <div class="rectangle"></div>
+        <div class="banner">
+          <div class="juskode">
+            <p>Djoes Kode</p>
+            <h1>Semoea Orang <br />Berhak SEHAT</h1>
+            <a class="mulai" href="#section-2">Mulai</a>
+          </div>
+        </div>
+        <div class="quotes">
+          <p>
+            “Sekarang hidup sehat gak perlu mahal,<br />
+            <span style="color: black"><b>Djoes Kode</b></span> solusi kita
+            semua.”
+          </p>
+          <p></p>
+        </div>
+      </section>
+
+      
+      <section id="section-2" class="tentangkami">
+        <div class="about container">
+          <!-- Slider start -->
+          <div class="slider">
+            <div class="slides">
+              <!-- Radio buttons for manual navigation -->
+              <input type="radio" name="radio_btn" id="radio1" />
+              <input type="radio" name="radio_btn" id="radio2" />
+              <input type="radio" name="radio_btn" id="radio3" />
+              
+              <!-- Slide images -->
+              <div class="slide first">
+                <img
+                src="asset/foto/foto-jus-plastik.webp"
+                alt="Jus Kode takeout juice"
+                />
+              </div>
+              <div class="slide">
+                <img
+                src="asset/foto/foto_isi_kedai_juskode.webp"
+                alt="Interior of Jus Kode shop"
+                />
+              </div>
+              <div class="slide">
+                <img
+                src="asset/foto/karyawan_juskode.webp"
+                alt="Jus Kode employees"
+                />
+              </div>
+              
+              <!-- Auto navigation buttons -->
+              <div class="nav-auto">
+                <div class="auto-btn1"></div>
+                <div class="auto-btn2"></div>
+                <div class="auto-btn3"></div>
+              </div>
+              
+              <!-- Manual navigation buttons -->
+              <div class="nav-manual">
+                <label for="radio1" class="manual-btn1"></label>
+                <label for="radio2" class="manual-btn1"></label>
+                <label for="radio3" class="manual-btn1"></label>
+              </div>
+            </div>
+          </div>
+          <!-- Slider end -->
+          
+          <!-- JavaScript for auto sliding -->
+          <script type="text/javascript">
+            var counter = 1;
+            setInterval(function () {
+              document.getElementById("radio" + counter).checked = true;
+              counter++;
+              if (counter > 3) {
+                counter = 1;
+              }
+            }, 6000);
+          </script>
+
+<!-- About Us text -->
+<div class="text-about">
+  <h5 class="tentangkamitext">Tentang Kami</h5>
+  <p class="p-tentangkami">
+    Jus Kode merupakan salah satu kedai jus yang didirikan pada
+    Februari tahun 2023. Jus Kode menyediakan berbagai varian jus
+    dengan porsi besar, harga murah, dan menggunakan buah-buahan yang
+    segar. Jus Kode didirikan di tengah tren gaya hidup sehat yang
+    sedang berkembang setelah adanya pandemi, sehingga <em>awareness</em> dan
+    <em>demand</em> disambut baik oleh banyak kustomer.
+  </p>
+  <button class="b-pelajari">Pelajari Lebih Lanjut</button>
+</div>
+</div>
+</section>
+
+<!--------------------->
+<!--temukan kami start-->
+<!--------------------->
+<section id="section-3" class="temukan">
+  <div class="temukankami">
+    <h5>Temukan Kedai Djoess Kode</h5>
+    <p class="p-temukan">
+      Seberapa dekat Kamu dengan kedai Djoes Kode? Yuk cari lokasi kedai Jus
+      Kode <br> dengan <em>search bar</em> kecil di bawah. Gampang!
+    </p>
+    <div class="tombol-lokasi">
+      <div>
+        <button class="lokasi" id="findLocationBtn">Gunakan lokasi sekarang</button>
+            </div>
+            <p class="atau">Atau</p>
+            <input
+              type="text"
+              id="search"
+              placeholder="Cari lokasi kedai jus kode"
+              />
+          </div>
+        </div>
+      </section>
+      <!--------------------->
+      <!--temukan kami end--->
+      <!--------------------->
+
+      <!--------------------->
+      <!--buah parallax--->
+      <!--------------------->
+      <section class="cobaa">
+        <div class="buah">
+            <div class="buahi">
+              <img src="asset/foto buah/webp/1.webp" class="object" data-value="-2" data-speed="0.1">
+              <img src="asset/foto buah/webp/2.webp" class="object1" data-value="6" data-speed="0.2">
+              <img src="asset/foto buah/webp/3.webp" class="object1" data-value="4" data-speed="0.3">
+              <img src="asset/foto buah/webp/4.webp" class="object" data-value="-6" data-speed="0.4">
+              <img src="asset/foto buah/webp/5.webp" class="object1" data-value="8" data-speed="0.5">
+              <img src="asset/foto buah/webp/6.webp" class="object" data-value="-4" data-speed="0.6">
+              <img src="asset/foto buah/webp/7.webp" class="object" data-value="5" data-speed="0.7">
+              <img src="asset/foto buah/webp/8.webp" class="object1" data-value="-9" data-speed="0.8">
+              <img src="asset/foto buah/webp/9.webp" class="object" data-value="-5" data-speed="0.9">
+            </div>
+            </div>
+        </section>
+      <!--------------------->
+      <!--buah parallax--->
+      <!--------------------->
+
+
+      <!--------------------->
+      <!---franchise start--->
+      <!--------------------->
+      <section id="section-4" class="franchise">
+        <div class="bentobox container">
+          <h5>Kenapa Djoes Kode</h5>
+          <div class="grid">
+            <div class="item item-1">
+              <div class="contentbento">
+                <div class="isi-bento">
+                  <p class="bento-judul-visi">Misi</p>
+                  <div class="bento-text-visi">
+                    <ul>
+                      <li>
+                        Menghadirkan variasi jus buah yang segar dan berkualitas
+                        tinggi untuk meningkatkan kesehatan pelanggan.
+                      </li>
+                      <li>
+                        Memberikan edukasi kepada masyarakat tentang manfaat jus
+                        dalam menjaga kesehatan dan meningkatkan daya tahan tubuh.
+                      </li>
+                      <li>
+                        Menyediakan lingkungan yang ramah dan nyaman bagi
+                        pelanggan untuk menikmati pengalaman jus yang menyegarkan.
+                      </li>
+                      <li>
+                        Mendukung pertumbuhan dan perkembangan masyarakat yang
+                        lebih sehat melalui kemitraan dengan lembaga kesehatan.
+                      </li>
+                      <li>
+                        Berkomitmen untuk terus berinovasi dalam menciptakan resep
+                        jus yang kreatif dan menyehatkan sesuai dengan tren dan
+                        kebutuhan pelanggan.
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="item item-2">
+              <div class="isi-bento">
+                <p class="bento-judul-visi">Visi</p>
+                <p class="bento-text-visi">
+                  Menjadi pelopor dalam memperkenalkan gaya hidup sehat dan
+                  kesadaran akan pentingnya nutrisi yang tepat melalui
+                  produk-produk jus berkualitas tinggi, menyediakan minuman yang
+                  tidak hanya lezat tetapi juga bermanfaat bagi kesehatan.
+                </p>
+              </div>
+            </div>
+            <div class="item item-3">
+              <div class="isi-bento">
+                <img src="asset/value/profit.jpg" class="profit" alt="">
+                <p class="bento-judul1">Profitability</p>
+                <p class="bento-text">
+                  Jus Kode fokus pada profitabilitas yang berkelanjutan dengan
+                  strategi bisnis yang inovatif dan efisien, memastikan
+                  pertumbuhan yang sehat dan stabil dimana jarak minimal 2Km
+                  antar kedai sehingga tidak mengganggu <em>sales </em>antar
+                  kedai.
+                </p>
+              </div>
+            </div>
+            <div class="item item-4">
+              <div class="isi-bento">
+                <img src="asset/value/rel.jpg" class="rel" alt="">
+                <p class="bento-judul">Reliability</p>
+                <p class="bento-text">
+                  Managemen dipegang oleh KODE Group sehingga SOP akan berjalan
+                  dengan baik dan menjamin konsistensi dalam kualitas produk dan
+                  pelayanan. Kami berdedikasi untuk memenuhi kebutuhan pelanggan
+                  dengan jus yang selalu segar, bergizi, dan diproduksi dengan
+                  standar tertinggi.
+                </p>
+              </div>
+            </div>
+            <div class="item item-5">
+              <div class="isi-bento">
+                <img class="sustain" src="asset/value/suntain.jpg">
+                <p class="bento-judul-kecil">Sustainability</p>
+                <p class="bento-text-kecil">
+                  Jus Kode mengutamakan penggunaan bahan organik dan lokal dalam
+                  setiap produknya.
+                </p>
+              </div>
+            </div>
+            <div class="item item-6">
+              <div class="isi-bento">
+                <img src="asset/value/aware.jpg" class="aware" alt="">
+                <p class="bento-judul-kecil">Awareness</p>
+                <p class="bento-text-kecil">
+                  Memiliki awareness lebih dari 10 juta di media sosial
+                  (Jabodetabek)
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="link-proposal">
+          <a
+            href="https://juskode.id/wp-content/uploads/2023/10/pdf_20231026_172413_0000.pdf" target="_blank"
+            >Download Proposal Franchise</a
+          >
+        </div>
+      </section>
+      <!--------------------->
+      <!--franchise end-->
+      <!--------------------->
+
+      <!--------------------->
+      <!--hubungi kami start-->
+      <!--------------------->
+      <section id="section-5" class="contacts">
+        <div class="kon">
+          <div class="kontakkami container">
+            <div class="tc-container">
+              <img class="back" src="asset/foto/foto-jus-webp.webp" alt="Delicious juice" />
+              <img class="front" src="asset/foto/menu.png" alt="menu">
+            </div>
+            <div class="kanan">
+              <h1>Hubungi Kami</h1>
+              <div class="b-hubungi">
+                <input type="text" placeholder="Nama">
+                <input type="text" placeholder="Alamat email">
+                <div class="pesan">
+                  <input type="text" placeholder="Tinggalkan pesan untuk kami">
+                </div>
+              </div>
+              <button class="b-kirim" href="">Kirim</button>
+            </div>
+        </div>
+      </section>
+      <!--------------------->
+      <!--hubungi kami end-->
+      <!--------------------->
+
+      <!--------------------->
+      <!----footer start----->
+      <!--------------------->
+      <section>
+        <div class="footer footer1">
+          <div class="isi-footer">
+            <div class="kodegrup container">
+              <img src="asset/logo/kodegroup.webp" alt="">
+              <p>
+                KODE Group adalah perusahaan yang bergerak di industri food & beverage dan menjadi kedai jus terbesar, terbanyak serta menjadi pilihan nomor satu bagi seluruh masyarakat Indonesia.
+              </p>
+            </div>
+            <div class="nav-footer">
+              <li>
+                <a href="#section-2">Tentang Kami</a>
+              </li>
+              <li><a href="">Profile Djoes Kode</a>
+              </li>
+              <li>
+                <a href="https://i0.wp.com/juskode.id/wp-content/uploads/20…-play-logo-png-vector.png?resize=2048%2C547&ssl=1">Apps Djoes Kode</a>
+              </li>
+              <li><a href="#section-3">Lokasi Outlet Djoes Kode</a>
+              </li>
+              <li>
+                <a href="https://juskode.id/wp-content/uploads/2023/10/pdf_20231026_172413_0000.pdf" target="_blank">Proposal Franchise</a></li>
+            </div>
+            <div class="f-hubungi">
+              <h5>Hubungi Kami</h5>
+              <p>Jl. Newton Bar. III no 58, Curug Sangereng, Kec. Klp. Dua,Kabupaten Tangerang, Banten 15810 <br><br>(123)-456-7890</p>
+              <div class="logo-social">
+                <a class="TIKTOK" href="https://www.tiktok.com/@kedaijuskode" target="_blank">
+                  <i class="fab fa-tiktok"></i>
+                </a>
+                <a href="https://www.instagram.com/juskode" target="_blank">
+                  <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://web.whatsapp.com/send?phone=6288297007129&text=Hello%20admin%20%40juskode%20aku%20mau%20tanya%20mengenai%20franchise" target="_blank">
+                  <i class="fab fa-whatsapp"></i>
+                </a>
+                <a href="mailto:Juskode@gmail.com" target="_blank">
+                  <i class="fa-solid fa-envelope"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div class="merah-gjls">
+          <div class="gls">
+            <p>© 2024 COPYRIGHT DJOES KODE - INDONESIA | TERMS & CONDITIONS | PRIVACY
+            </p>
+          </div>
+        </div>
+
+      </section>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
